@@ -1,3 +1,5 @@
+-- Here are some querys that you can use in the terminal
+
 SELECT DISTINCT make, model from registration;
 
 SELECT DISTINCT ownertype, model from registration limit 5;
