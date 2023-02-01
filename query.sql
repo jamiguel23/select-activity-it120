@@ -9,3 +9,9 @@ SELECT DISTINCT electrification from registration;
 SELECT DISTINCT use, color from registration;
 
 SELECT DISTINCT electrification, state from registration;
+
+-- finds the count of entries in make
+SELECT count(make) from registration;
+
+-- find color or ferrari
+SELECT color from registration where make = 'FERRARI';
