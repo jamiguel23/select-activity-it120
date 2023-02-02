@@ -8,3 +8,8 @@ WHERE electrification = 'BEV (Battery Electric Vehicle)'
 GROUP BY county
 ORDER BY count DESC;
 
+
+-- What colors are Ferraris
+SELECT DISTINCT color 
+FROM registration 
+Where make = 'FERRARI';
