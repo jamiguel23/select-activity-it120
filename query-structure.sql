@@ -13,3 +13,10 @@ ORDER BY count DESC;
 SELECT DISTINCT color 
 FROM registration 
 Where make = 'FERRARI';
+
+-- Number of Tesla vehicles by model
+SELECT model, count(model)
+FROM registration
+WHERE Make = 'TESLA'
+GROUP BY Model
+ORDER BY count ASC;
