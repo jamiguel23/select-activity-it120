@@ -82,3 +82,4 @@ ORDER BY count ASC;
 SELECT DISTINCT make
 FROM registration
 GROUP BY make;
+
