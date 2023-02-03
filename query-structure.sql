@@ -83,3 +83,21 @@ SELECT DISTINCT make
 FROM registration
 GROUP BY make;
 
+--What is the top 5 most common model year
+
+SELECT DISTINCT MYear, count(Myear)
+FROM registration
+GROUP BY MYear
+ORDER BY count DESC
+LIMIT 5;
+
+-- Answer:
+
+--  myear | count 
+-- -------+-------
+--   2017 |  3025
+--   2015 |  2883
+--   2016 |  2805
+--   2018 |  2790
+--   2019 |  2463
+-- (5 rows)
