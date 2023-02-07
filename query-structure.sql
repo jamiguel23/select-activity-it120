@@ -80,17 +80,18 @@ ORDER BY count ASC;
 -- (5 rows)
 
 
--- What makes are represented in the db
+-- how many vehicles per make? what is the interesting order?
 
-SELECT DISTINCT make
+SELECT make, count(make)
 FROM registration
-GROUP BY make;
+GROUP BY make
+ORDER BY count DESC;
 
 --What is the top 5 most common model year
 
-SELECT DISTINCT MYear, count(Myear)
+SELECT DISTINCT Myear, count(Myear)
 FROM registration
-GROUP BY MYear
+GROUP BY Myear
 ORDER BY count DESC
 LIMIT 5;
 
@@ -104,3 +105,11 @@ LIMIT 5;
 --   2018 |  2790
 --   2019 |  2463
 -- (5 rows)
+
+
+-- How many F-150's were registered in 2013?
+SELECT Myear, count(Myear)
+FROM registration
+WHERE model = 'F-150' AND Myear = 2013
+GROUP BY Myear;
+
