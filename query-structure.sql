@@ -44,19 +44,22 @@ ORDER BY count DESC;
 
 
 
--- What colors are Ferraris
-SELECT DISTINCT color 
+-- are most Ferraris red?
+SELECT DISTINCT color, count(color) 
 FROM registration 
-Where make = 'FERRARI';
+Where make = 'FERRARI'
+GROUP BY color
+ORDER BY count ASC;
 
--- Answer:  
+-- Answer:  No, Most are black
 
--- color       
--- -------------------
---  ALUMINUM / SILVER
---  BLACK
---  IVORY
---  RED
+--        color       | count 
+-- -------------------+-------
+--                    |     0
+--  ALUMINUM / SILVER |     1
+--  IVORY             |     1
+--  RED               |     1
+--  BLACK             |     2
 
 
 -- Number of Tesla vehicles by model
