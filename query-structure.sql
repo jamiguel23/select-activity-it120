@@ -113,3 +113,12 @@ FROM registration
 WHERE model = 'F-150' AND Myear = 2013
 GROUP BY Myear;
 
+
+-- sub query where the model count is greater than 3 for the model years older than 2005
+SELECT * 
+FROM (SELECT DISTINCT make, model, count(model)
+FROM registration
+WHERE myear > 2005
+GROUP BY model, make) bagel
+WHERE count > 3
+ORDER BY count DESC;
