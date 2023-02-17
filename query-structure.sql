@@ -122,3 +122,8 @@ WHERE myear > 2005
 GROUP BY model, make) bagel
 WHERE count > 3
 ORDER BY count DESC;
+
+-- what makes are represented in the db
+
+SELECT make
+FROM regestration;
